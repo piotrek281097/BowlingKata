@@ -34,6 +34,11 @@ public class GameTest {
         assertThat(game.score(), is(16));
     }
 
+    @Test
+    public void canScoreStrikeFollowedByThreeThenThree() {
+        game.roll(10, 3,3, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0, 0,0);
 
+        assertThat(game.score(), is(22));
+    }
 
 }
