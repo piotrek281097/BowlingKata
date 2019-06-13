@@ -15,4 +15,16 @@ public class GameTest {
 
         assertThat(game.score(), is(0));
     }
+
+    @Test
+    public void canScoreGameOfOnes() {
+        Game game = new Game();
+        for(int i = 0; i < 20; i++) {
+            game.roll(1);
+        }
+
+        assertThat(game.score(), is(20));
+    }
+
+
 }
