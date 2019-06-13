@@ -41,4 +41,10 @@ public class GameTest {
         assertThat(game.score(), is(22));
     }
 
+    @Test
+    public void canScorePerfectGame() {
+        game.roll(10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10);
+
+        assertThat(game.score(), is(300));
+    }
 }
